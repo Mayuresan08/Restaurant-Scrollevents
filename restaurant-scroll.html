@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            /* background-color: yellow; */
+        }
+        .navbar{
+            height: 6rem;
+            width: 100%;
+            background-color: black;
+            margin-top: auto;
+            position: sticky;
+            top:0;
+            transition: 0.25s;
+            
+        }
+        .navbar > h1{
+            color: yellow;
+            position: relative;
+            top:15%;
+            font-family: 'Allison', cursive;
+            font-size: 3rem;
+            display: inline-block;
+           
+        }
+        
+        ul{
+            list-style: none;
+            float: right;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            height: 100%; 
+        }
+        li{
+            display: inline-block;
+            color: white;
+            margin-right:2rem ;
+            
+        }
+        .main-background{
+            background-image: url(https://source.unsplash.com/GXXYkSwndP4/1600x1200);
+            height: 100vh;
+            width: 100%;
+            object-fit: contain;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+        .main-para,h2{
+            color: white;
+            text-align: center;
+            width:80%;
+            margin:auto;
+        }
+        .cards{
+            display:flex;
+            background-color: black;
+            gap:5rem;
+            justify-content: center;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .card{
+            width:17rem;
+            height:15rem;
+            margin-top: 2rem;
+            background-color: orchid;
+            border-radius: 10px;
+            color: white;
+           
+        }
+        .card1{
+            background-image: url(https://source.unsplash.com/Mspw00-Jlgo/400x300) ;
+           display: none;
+        }
+        .card2{
+            background-image: url(https://source.unsplash.com/bBzjWthTqb8/400x300) ;
+             display: none;
+            
+        }
+        .card3{
+            background-image: url(https://source.unsplash.com/A1CSdDICctM/400x300) ;
+             display: none; 
+        }
+        .card4{
+            background-image: url(https://source.unsplash.com/s8iYlK9ByQE/400x300) ;
+           display: none;
+        }
+        .card5{
+            background-image: url(https://source.unsplash.com/alo1EspH-ec/400x300) ;
+             display: none;
+            
+        }
+        .card6{
+            background-image: url(https://source.unsplash.com/Wpg3Qm0zaGk/400x300) ;
+             display: none; 
+        }
+
+        .cardHeader{
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        .recipe
+        {
+            display: flex;
+             align-items: center;
+             font-size: 2rem;
+        }
+        .footer{
+            height: 10rem;
+            width: 100%;
+            background-color: rgb(43, 40, 40);
+            color: white;
+        }
+        .slideleft{
+            animation: slideLeft 0.5s;
+        }
+        .slideleftDisapper{
+            animation: slideLeft1  0.5s;
+            animation-fill-mode: forwards;
+        }
+        .slideup{
+            animation: slideUp  0.5s; 
+        }
+        .slideupDisappear{
+            animation: slideUp1  0.5s; 
+            animation-fill-mode: forwards;
+        }
+        .slideright{
+            animation: slideRight  0.5s; 
+        }
+        .sliderightDisappear{
+            animation: slideRight1  0.5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes slideLeft {
+            0%{
+                transform:translateX(-50%) ;
+            }         
+        }
+        @keyframes slideLeft1 {
+            0%{
+                transform:translateX(0) 
+            }
+            100%{
+                transform:translateX(-50%) ;
+                opacity: 0;
+            }
+        }
+        @keyframes slideUp {
+            0%{
+                transform:translateY(50%) 
+            }
+        }
+        @keyframes slideUp1 {
+            0%{
+                transform:translateY(0) ;
+            }
+            100%{
+                transform:translateY(50%) ;
+                opacity: 0;
+            }
+        }
+        @keyframes slideRight {
+            0%{
+                transform:translateX(50%) ;
+            }
+        }
+        @keyframes slideRight1 {
+            100%{
+                transform:translateX(50%) ;
+                opacity: 0;
+              
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="nav-header">RoasT</h3>
+                <ul class="nav-list">
+                    <li>Home</li>
+                    <li>service</li>
+                    <li>About</li>
+                    <li>contact</li>
+                </ul>
+            
+    </div>
+    <div class="main-background">
+        <div><p class="main-para">ROASt</p></div>
+    </div>
+    <h1 class="cardHeader">Today's Exclusive</h1>
+    <div class="cards">  
+        <div class="card card1"><p class="recipe">chicken wings</p></div>
+        <div class="card card2"><p class="recipe">Green Salad</p></div>
+        <div class="card card3"><p class="recipe">Fish skew</p></div>
+    </div>
+    <div class="cards">  
+        <div class="card card4"><p class="recipe">Pancakes</p></div>
+        <div class="card card5"><p class="recipe">Puddings</p></div>
+        <div class="card card6"><p class="recipe">Ice-creams</p></div>
+    </div>
+    <div class="footer">
+        <h2>ABOUT</h2>
+        <p class="main-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+    </div>
+
+    <script>
+        window.onscroll=()=>{
+            let nav=document.querySelector(".navbar")
+            let card1=document.querySelector(".card1")
+            let card2=document.querySelector(".card2")
+            let card3=document.querySelector(".card3")
+            let card4=document.querySelector(".card4")
+            let card5=document.querySelector(".card5")
+            let card6=document.querySelector(".card6")
+           if (document.scrollingElement.scrollTop>50)
+           {
+           let nav=document.querySelector(".navbar")
+           nav.style.height="4rem";
+           }
+           else
+           {
+            nav.style.height="6rem";
+           }
+
+           if(document.scrollingElement.scrollTop>240)
+           {
+                 card1.style.display="block"
+                card1.classList.add("slideleft")
+                card1.classList.remove("slideleftDisapper")
+                card2.style.display="block"
+                card2.classList.add("slideup")
+                card2.classList.remove("slideupDisappear")
+                card3.style.display="block"
+                card3.classList.add("slideright")
+                card3.classList.remove("sliderightDisappear")
+        
+           }
+           else
+           {
+               
+                card1.classList.remove("slideleft")
+                card1.classList.add("slideleftDisapper")
+                card2.classList.remove("slideup")
+                card2.classList.add("slideupDisappear")
+                card3.classList.remove("slideright")
+                card3.classList.add("sliderightDisappear")
+
+          
+           }
+           if(document.scrollingElement.scrollTop>470)
+           {
+               card4.style.display="block"
+                card4.classList.add("slideleft")
+                card4.classList.remove("slideleftDisapper")
+                card5.style.display="block"
+                card5.classList.add("slideup")
+                card5.classList.remove("slideupDisappear")
+                card6.style.display="block"
+                card6.classList.add("slideright")
+                card6.classList.remove("sliderightDisappear")
+           }
+           else{
+                card4.classList.remove("slideleft")
+                card4.classList.add("slideleftDisapper")
+                card5.classList.remove("slideup")
+                card5.classList.add("slideupDisappear")
+                card6.classList.remove("slideright")
+                card6.classList.add("sliderightDisappear")
+           }
+
+        }
+    </script>
+</body>
+</html>
